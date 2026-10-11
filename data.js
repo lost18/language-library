@@ -120,6 +120,67 @@ const sentences = [
     punjabi: "",
     notes: "",
     audio: "audio/12.mp3"
+  },
+{
+    id: 13,
+    videoId: 141,
+    english: "Sit in the back seat",
+    punjabi: "",
+    notes: "",
+    audio: "audio/13.mp3"
   }
-  
+,
+  {
+    id: 14,
+    videoId: 141,
+    english: "One person sit in the front",
+    punjabi: "",
+    notes: "",
+    audio: "audio/14.mp3"
+  }
+,
+  {
+    id: 15,
+    videoId: 141,
+    english: "Close the window (saying to one person)",
+    punjabi: "",
+    notes: "",
+    audio: "audio/15.mp3"
+  }
+,
+  {
+    id: 16,
+    videoId: 141,
+    english: "Close the window (saying to two people)",
+    punjabi: "",
+    notes: "you can also say this to one person if you want to say respectfully 'karlo' for respect as opposed to 'karla'",
+    audio: "audio/16.mp3"
+  }
+,
+  {
+    id: 17,
+    videoId: 141,
+    english: "Close the window/ open the window",
+    punjabi: "",
+    notes: "",
+    audio: "audio/17.mp3"
+  }
+,
+  {
+    id: 18,
+    videoId: 141,
+    english: "Close the window (for yourself, for me)",
+    punjabi: "",
+    notes: "The difference between 'col'la' and 'col'de'",
+    audio: "audio/18.mp3"
+  }
+,
+  {
+    id: 19,
+    videoId: 141,
+    english: "Don't drive the car so fast, you can hit somebody ",
+    punjabi: "",
+    notes: "",
+    audio: "audio/19.mp3"
+  }
 ];
