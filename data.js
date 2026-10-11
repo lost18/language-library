@@ -4,6 +4,8 @@
   Add new videos to the "videos" array and new examples to "sentences".
   Keep IDs unique. A sentence's videoId must match a video's id.
   Punjabi text and notes are optional; fill them in whenever you want.
+  
+  
 
 */
 
@@ -19,6 +21,12 @@ const videos = [
     title: "Colloquial Punjabi phrases about driving or car",
     url: "https://www.youtube.com/watch?v=0AhSnU7gwvc",
     summary: "Different things you're likely to say in a car. Remember the back-seat passenger vocabulary is different."
+  },
+  {
+    id: 134,
+    title: "How to use these verbs in Punjabi ਭਿਆਂ ਕਰਨਾ, ਭੁਸ ਪਾਉਣਾ etc",
+    url: "https://www.youtube.com/watch?v=e0JaFH5mGuA",
+    summary: ""
   }
 ];
 
@@ -182,5 +190,140 @@ const sentences = [
     punjabi: "",
     notes: "",
     audio: "audio/19.mp3"
+  }
+,
+  {
+    id: 20,
+    videoId: 134,
+    english: "Why did you make such a mess",
+    punjabi: "",
+    notes: "",
+    audio: "audio/20.mp3"
+  }
+,
+  {
+    id: 21,
+    videoId: 134,
+    english: "Alright bro my hands are up, now we're not working, we will work later",
+    punjabi: "",
+    notes: "This is an idiom",
+    audio: "audio/21.mp3"
+  }
+,
+  {
+    id: 22,
+    videoId: 134,
+    english: "No more work now, I cannot continue",
+    punjabi: "",
+    notes: "",
+    audio: "audio/22.mp3"
+  }
+,
+  {
+    id: 23,
+    videoId: 134,
+    english: "No bro, I'm done (my hands are up)",
+    punjabi: "",
+    notes: "for example when you're at the gym and bro says do another set",
+    audio: "audio/23.mp3"
+  }
+,
+  {
+    id: 24,
+    videoId: 134,
+    english: "No bro, I'm done",
+    punjabi: "",
+    notes: "",
+    audio: "audio/24.mp3"
+  }
+,
+  {
+    id: 25,
+    videoId: 134,
+    english: "I'm not speaking with that guy because i'm angry/dissapointed. ",
+    punjabi: "",
+    notes: "'Gusay' doesn't just mean angry. ",
+    audio: "audio/25.mp3"
+  }
+,
+  {
+    id: 26,
+    videoId: 134,
+    english: "Why are you getting angry (male) ",
+    punjabi: "",
+    notes: "Instead of 'katho' could have also used 'kyon'",
+    audio: "audio/26.mp3"
+  }
+,
+  {
+    id: 27,
+    videoId: 134,
+    english: "Why are you getting angry (female)",
+    punjabi: "",
+    notes: "The verb changed. 'Harkna' is the verb. In future it's 'harkouga' / 'harkougi', in past it's 'hark'gi' / 'hark'gya'",
+    audio: "audio/27.mp3"
+  }
+,
+  {
+    id: 28,
+    videoId: 134,
+    english: "Yesterday she got really angry ",
+    punjabi: "",
+    notes: "",
+    audio: "audio/28.mp3"
+  }
+,
+  {
+    id: 29,
+    videoId: 134,
+    english: "Yesterday he got so angry",
+    punjabi: "",
+    notes: "",
+    audio: "audio/29.mp3"
+  }
+,
+  {
+    id: 30,
+    videoId: 134,
+    english: "Don't do that because she will get angry ",
+    punjabi: "",
+    notes: "",
+    audio: "audio/30.mp3"
+  }
+,
+  {
+    id: 31,
+    videoId: 134,
+    english: "Don't do that or he will get very angry ",
+    punjabi: "",
+    notes: "",
+    audio: "audio/31.mp3"
+  }
+,
+  {
+    id: 32,
+    videoId: 134,
+    english: "Who made him want to eat ice cream? David's son made him want to eat ice cream. ",
+    punjabi: "",
+    notes: "",
+    audio: "audio/32.mp3"
+  }
+,
+  {
+    id: 33,
+    videoId: 134,
+    english: "I don't find it difficult, I've made it a habit",
+    punjabi: "",
+    notes: "",
+    audio: "audio/33.mp3"
+  }
+,
+  {
+    id: 34,
+    videoId: 134,
+    english: "It's my habit. 2 variations",
+    punjabi: "",
+    notes: "'aadat' and 'pyos'",
+    audio: "audio/34.mp3"
   }
 ];
