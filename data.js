@@ -5,8 +5,6 @@
   Keep IDs unique. A sentence's videoId must match a video's id.
   Punjabi text and notes are optional; fill them in whenever you want.
 
-  Google Drive audio links are stored as you copied them from Sheets.
-  The website tries a direct audio URL first and also gives you a fallback link.
 */
 
 const videos = [
@@ -120,8 +118,10 @@ const sentences = [
     punjabi: "",
     notes: "",
     audio: "audio/12.mp3"
-  },
-{
+  }
+  
+,
+  {
     id: 13,
     videoId: 141,
     english: "Sit in the back seat",
