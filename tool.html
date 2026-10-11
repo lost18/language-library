@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punjabi Clip Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tool-container { max-width: 650px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 10px; border: 1px solid #dadce0; }
+    .step-box { border: 2px dashed #b9bec7; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 20px; background: #f8f9fa; }
+    .step-box.active { border-color: #1759a8; background: #eef2f7; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-weight: 700; margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #b9bec7; border-radius: 7px; font: inherit; }
+    .form-group textarea { resize: vertical; height: 90px; }
+    .success-banner { background: #e6f4ea; color: #137333; padding: 12px; border-radius: 7px; margin-bottom: 16px; font-weight: 600; display: none; }
+    .disabled-section { opacity: 0.4; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <main class="tool-container">
+    <h1>Punjabi Clip Manager</h1>
+    <p class="muted">Connect your project folder once, upload your clips, and update everything automatically.</p>
+
+    <div id="success-msg" class="success-banner"></div>
+
+    <!-- Step 1: Select Folder -->
+    <div class="step-box active" id="folder-step">
+      <h3>Step 1: Connect Your Project Folder</h3>
+      <p class="muted small" style="margin: 8px 0 14px;">Click below and select your main project folder so this tool can access `data.js` and your `audio/` folder.</p>
+      <button type="button" id="select-folder-btn">📁 Select Project Folder</button>
+      <p id="folder-status" class="small muted" style="margin-top: 10px;"></p>
+    </div>
+
+    <!-- Step 2: Form & Uploader -->
+    <form id="clip-form" class="disabled-section">
+      <div class="form-group">
+        <label for="audio-file">Audio File (mp3)</label>
+        <input type="file" id="audio-file" accept=".mp3" required>
+        <!-- Audio Preview Player -->
+        <audio id="audio-preview" class="audio-player hidden" controls style="width: 100%; margin-top: 10px;"></audio>
+        <p class="small muted" style="margin-top: 4px;">Will be automatically renamed to the next ID and saved into your `audio/` folder.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="video-id">Video ID</label>
+        <select id="video-id" required>
+          <!-- Populated dynamically from data.js -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="english">English Translation</label>
+        <input type="text" id="english" placeholder="e.g. Today it is going to rain" required>
+      </div>
+
+      <div class="form-group">
+        <label for="punjabi">Punjabi (Optional)</label>
+        <input type="text" id="punjabi" placeholder="Leave blank if not needed">
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes (Optional)</label>
+        <textarea id="notes" placeholder="Grammar explanations, vocabulary breakdowns..."></textarea>
+      </div>
+
+      <button type="submit" id="confirm-btn">Confirm & Update data.js</button>
+    </form>
+  </main>
+
+  <script src="tool.js"></script>
+</body>
+</html>
