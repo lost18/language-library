@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Punjabi Learning Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Punjabi Learning Library</h1>
+    <p class="muted">Your personal library of example sentences and audio.</p>
+  </header>
+
+  <main>
+    <section class="summary-bar" aria-label="Library statistics">
+      <div><strong id="video-count">0</strong><span>Videos</span></div>
+      <div><strong id="sentence-count">0</strong><span>Sentences</span></div>
+    </section>
+
+    <section class="controls" aria-label="Search and filters">
+      <label class="search-label" for="search">Search sentences</label>
+      <input id="search" type="search" placeholder="Search English, Punjabi, notes or video title…">
+
+      <div class="filter-row">
+        <label for="video-filter">Video
+          <select id="video-filter">
+            <option value="">All videos</option>
+          </select>
+        </label>
+        <label for="sort-order">Order
+          <select id="sort-order">
+            <option value="id">Sentence ID</option>
+            <option value="video">Group by video</option>
+            <option value="random">Shuffle</option>
+          </select>
+        </label>
+        <button id="shuffle-button" type="button">Shuffle sentences</button>
+      </div>
+    </section>
+
+    <section id="video-info" class="video-info hidden" aria-live="polite">
+      <div class="video-info-heading">
+        <h2 id="video-title"></h2>
+        <a id="video-link" href="#" target="_blank" rel="noopener noreferrer">Open YouTube video ↗</a>
+      </div>
+      <p id="video-summary"></p>
+    </section>
+
+    <section>
+      <div class="results-heading">
+        <h2>Sentences</h2>
+        <span id="result-count" class="muted"></span>
+      </div>
+      <div id="sentence-list" class="sentence-list"></div>
+      <p id="empty-state" class="empty-state hidden">No sentences match your search.</p>
+    </section>
+
+    <footer>
+      <p>Created by RAJVIRRRRRRRRR.</p>
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

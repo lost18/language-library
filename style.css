@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202124;
+  background: #f5f6f8;
+}
+
+body {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.page-header {
+  background: #fff;
+  border-bottom: 1px solid #dadce0;
+  padding: 24px max(18px, calc((100% - 980px) / 2));
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.65rem;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.muted {
+  color: #666b73;
+}
+
+.small {
+  font-size: 0.88rem;
+}
+
+.summary-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.summary-bar > div {
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  min-width: 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.summary-bar strong {
+  font-size: 1.35rem;
+}
+
+.summary-bar span {
+  color: #666b73;
+  font-size: 0.9rem;
+}
+
+.controls, .video-info, .sentence-card {
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+}
+
+.controls {
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.search-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+input[type="search"], select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #b9bec7;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font: inherit;
+  background: #fff;
+  color: inherit;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(140px, 0.7fr) auto;
+  align-items: end;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.filter-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+button, .button-link {
+  min-height: 40px;
+  border: 1px solid #9aa0a6;
+  border-radius: 7px;
+  padding: 8px 12px;
+  background: #fff;
+  color: #202124;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover, .button-link:hover {
+  background: #f0f3f7;
+}
+
+.video-info {
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.video-info-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.video-info a, .sentence-card a {
+  color: #1759a8;
+}
+
+.video-info p {
+  margin-bottom: 0;
+}
+
+.results-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 22px 0 12px;
+}
+
+.sentence-list {
+  display: grid;
+  gap: 12px;
+}
+
+.sentence-card {
+  padding: 16px;
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sentence-id {
+  color: #666b73;
+  font-size: 0.83rem;
+  margin-bottom: 5px;
+}
+
+.english {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.punjabi {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.notes {
+  color: #555b64;
+  font-size: 0.93rem;
+  margin: 8px 0;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 480px;
+  display: block;
+  margin-top: 10px;
+}
+
+.video-tag {
+  display: inline-block;
+  border-radius: 5px;
+  background: #eef2f7;
+  padding: 4px 7px;
+  color: #444b55;
+  font-size: 0.82rem;
+  margin-top: 3px;
+}
+
+.empty-state {
+  background: #fff;
+  border: 1px dashed #b9bec7;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  color: #666b73;
+}
+
+.hidden {
+  display: none !important;
+}
+
+footer {
+  margin-top: 28px;
+  border-top: 1px solid #dadce0;
+  padding-top: 18px;
+  color: #555b64;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    padding: 20px 16px;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-row button {
+    width: 100%;
+  }
+
+  .summary-bar > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sentence-card {
+    padding: 13px;
+  }
+
+  .card-top {
+    display: block;
+  }
+}
