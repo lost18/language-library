@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Punjabi Practice & Autoplay</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .practice-container { max-width: 700px; margin: 0 auto; }
+    .card { background: #fff; border: 1px solid #dadce0; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+    .checkbox-grid { display: grid; gap: 8px; max-height: 200px; overflow-y: auto; border: 1px solid #dadce0; padding: 10px; border-radius: 7px; background: #fafafa; margin-top: 6px; }
+    .checkbox-label { display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; font-size: 0.95rem; }
+    .settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .status-display { text-align: center; padding: 30px; background: #fff; border: 1px solid #dadce0; border-radius: 10px; margin-bottom: 20px; }
+    .status-phase { font-size: 1.1rem; color: #1759a8; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .status-text { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; color: #202124; }
+    .status-timer { font-size: 1.25rem; font-weight: 600; color: #1759a8; margin-bottom: 8px; min-height: 30px; }
+    .status-notes { color: #555b64; font-size: 0.95rem; margin-top: 6px; }
+    .controls-row { display: flex; gap: 10px; margin-top: 15px; }
+    .controls-row button { flex: 1; }
+    .btn-danger { background: #fce8e6; color: #c5221f; border-color: #f1b4b0; }
+    .btn-danger:hover { background: #fad2cf; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <h1>Punjabi Practice Mode</h1>
+    <p class="muted">Active recall autoplay with customizable thinking breaks.</p>
+    <a href="index.html" class="button-link" style="margin-top: 10px;">← Back to Library</a>
+  </header>
+
+  <main class="practice-container">
+    
+    <!-- Setup Panel -->
+    <section id="setup-panel" class="card">
+      <h2>1. Select Lessons to Practice</h2>
+      <div style="margin-bottom: 12px;">
+        <button type="button" id="select-all-btn" class="small" style="min-height: 30px; padding: 4px 8px;">Select All</button>
+        <button type="button" id="deselect-all-btn" class="small" style="min-height: 30px; padding: 4px 8px;">Deselect All</button>
+      </div>
+      <div id="video-checkboxes" class="checkbox-grid"></div>
+
+      <h2 style="margin-top: 20px;">2. Customize Timings & Options</h2>
+      <div class="settings-grid">
+        <label for="break-before">
+          Thinking Break 1 (seconds)<br>
+          <span class="muted small">After English, before Punjabi</span>
+          <input type="number" id="break-before" value="3" min="0" max="30" style="margin-top: 4px;">
+        </label>
+        <label for="break-after">
+          Thinking Break 2 (seconds)<br>
+          <span class="muted small">After Punjabi, before next clip</span>
+          <input type="number" id="break-after" value="3" min="0" max="30" style="margin-top: 4px;">
+        </label>
+      </div>
+      
+      <div style="margin-top: 14px;">
+        <label class="checkbox-label" style="font-weight: 700;">
+          <input type="checkbox" id="shuffle-toggle" checked style="width: auto; min-height: auto;"> Shuffle playlist randomly
+        </label>
+      </div>
+
+      <button type="button" id="start-btn" style="width: 100%; margin-top: 20px; font-size: 1.1rem; background: #1759a8; color: #fff; border-color: #1759a8;">▶ Start Practice Session</button>
+    </section>
+
+    <!-- Active Player Session Panel (Hidden initially) -->
+    <section id="player-panel" class="hidden">
+      <div class="status-display">
+        <div id="session-progress" class="muted small" style="margin-bottom: 10px;">Clip 1 of 10</div>
+        <div id="status-phase" class="status-phase">Ready</div>
+        <div id="status-english" class="status-text">English translation appears here</div>
+        <div id="status-timer" class="status-timer">⏳ —</div>
+        <div id="status-notes" class="status-notes"></div>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <audio id="hidden-audio" style="display: none;"></audio>
+        <div class="controls-row">
+          <button type="button" id="pause-resume-btn">Pause</button>
+          <button type="button" id="skip-btn">Skip to Next</button>
+          <button type="button" id="stop-btn" class="btn-danger">End Session</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="practice.js"></script>
+</body>
+</html>
